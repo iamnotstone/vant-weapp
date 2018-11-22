@@ -7,6 +7,7 @@ VantComponent({
     title: null,
     value: null,
     icon: String,
+    size: String,
     label: String,
     center: Boolean,
     isLink: Boolean,
@@ -27,7 +28,8 @@ VantComponent({
         'van-cell--center': data.center,
         'van-cell--required': data.required,
         'van-cell--borderless': !data.border,
-        'van-cell--clickable': data.isLink || data.clickable
+        'van-cell--clickable': data.isLink || data.clickable,
+        ["van-cell--" + data.size]: data.size
       });
     },
     titleStyle: function titleStyle() {
